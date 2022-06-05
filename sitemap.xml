@@ -2,6 +2,33 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://123yujiahang.github.io/2022/06/05/four/</loc>
+    
+    <lastmod>2022-06-05</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://123yujiahang.github.io/2022/06/05/six/</loc>
+    
+    <lastmod>2022-06-05</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://123yujiahang.github.io/2022/06/05/five/</loc>
+    
+    <lastmod>2022-06-05</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://123yujiahang.github.io/2022/05/17/three/</loc>
     
     <lastmod>2022-05-17</lastmod>
@@ -38,7 +65,7 @@
   </url>
   
   <url>
-    <loc>https://123yujiahang.github.io/about/index.html</loc>
+    <loc>https://123yujiahang.github.io/categories/index.html</loc>
     
     <lastmod>2022-05-16</lastmod>
     
@@ -47,7 +74,7 @@
   </url>
   
   <url>
-    <loc>https://123yujiahang.github.io/categories/index.html</loc>
+    <loc>https://123yujiahang.github.io/about/index.html</loc>
     
     <lastmod>2022-05-16</lastmod>
     
@@ -58,7 +85,7 @@
 
   <url>
     <loc>https://123yujiahang.github.io/</loc>
-    <lastmod>2022-05-20</lastmod>
+    <lastmod>2022-06-05</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>

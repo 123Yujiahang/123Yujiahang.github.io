@@ -6,7 +6,7 @@
   <link href="https://123yujiahang.github.io/atom.xml" rel="self"/>
   
   <link href="https://123yujiahang.github.io/"/>
-  <updated>2022-05-17T06:44:29.861Z</updated>
+  <updated>2022-06-05T05:38:51.979Z</updated>
   <id>https://123yujiahang.github.io/</id>
   
   <author>
@@ -15,6 +15,77 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>six</title>
+    <link href="https://123yujiahang.github.io/2022/06/05/six/"/>
+    <id>https://123yujiahang.github.io/2022/06/05/six/</id>
+    <published>2022-06-05T05:38:51.000Z</published>
+    <updated>2022-06-05T05:38:51.979Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><blockquote><ul><li><a href></a></li><li><a href></a></li></ul></blockquote>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;参考资料&quot;&gt;&lt;a href=&quot;#参考资料&quot; class=&quot;headerlink&quot; title=&quot;参考资料&quot;&gt;&lt;/a&gt;参考资料&lt;/h2&gt;&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/u</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>five</title>
+    <link href="https://123yujiahang.github.io/2022/06/05/five/"/>
+    <id>https://123yujiahang.github.io/2022/06/05/five/</id>
+    <published>2022-06-05T05:38:42.000Z</published>
+    <updated>2022-06-05T05:38:42.934Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><blockquote><ul><li><a href></a></li><li><a href></a></li></ul></blockquote>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;参考资料&quot;&gt;&lt;a href=&quot;#参考资料&quot; class=&quot;headerlink&quot; title=&quot;参考资料&quot;&gt;&lt;/a&gt;参考资料&lt;/h2&gt;&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/u</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>four</title>
+    <link href="https://123yujiahang.github.io/2022/06/05/four/"/>
+    <id>https://123yujiahang.github.io/2022/06/05/four/</id>
+    <published>2022-06-05T05:38:29.000Z</published>
+    <updated>2022-06-05T05:48:46.868Z</updated>
+    
+    <content type="html"><![CDATA[<p>*<strong>*一、*<em>Kafka环境配置*</em></strong></p><p>1、上传安装包到&#x2F;export&#x2F;server&#x2F;路径并解压</p><p>cd &#x2F;export&#x2F;server</p><p>rz</p><p><img src="/2022/06/05/four/1.png" alt="img"> </p><p>tar -zxvf kafka_2.11-2.0.0.tgz</p><p>2、修改配置文件</p><p>（1）进入配置文件目录</p><p> cd &#x2F;export&#x2F;server&#x2F;kafka_2.11-2.0.0&#x2F;config</p><p>（2）编辑配置文件</p><p> –vim server.properties</p><p>broker.id&#x3D;0 从0开始，依次增加（0,1,2,3,4…），每台不能重复</p><p>将Listeners &#x3D; plaintext:&#x2F;&#x2F;:9092改成：Listeners &#x3D; plaintext:&#x2F;&#x2F;node1:9092</p><p><img src="/2022/06/05/four/2.png" alt="img"> </p><p>#数据存储的目录</p><p>log.dirs&#x3D;&#x2F;export&#x2F;server&#x2F;data&#x2F;kafka-logs </p><p>#默认分区数</p><p>Num.partitions &#x3D; 1</p><p><img src="/2022/06/05/four/3.png" alt="img"> </p><p>—-Log retention policy—-</p><p>数据保留策略 168&#x2F;24&#x3D;7，1073741824&#x2F;1024&#x3D;1GB，300000ms &#x3D; 300s &#x3D; 5min（超过了删掉）</p><p><img src="/2022/06/05/four/4.png" alt="img"> </p><p>#指定 zk 集群地址</p><p>zookeeper.connect&#x3D;node1:2181,node2:2181,node3:2181</p><p><img src="/2022/06/05/four/5.png" alt="img"> </p><p>3、分发kafka</p><p>cd &#x2F;export&#x2F;server&#x2F;</p><p>scp -r &#x2F;export&#x2F;server&#x2F;kafka_2.11-2.0.0&#x2F; node2:$PWD</p><p>scp -r &#x2F;export&#x2F;server&#x2F;kafka_2.11-2.0.0&#x2F; node3:$PWD</p><p>（注意：分发完后需修改node2，node3中的server.properties文件）</p><p>node2</p><p><img src="/2022/06/05/four/6.png" alt="img"> </p><p><img src="/2022/06/05/four/7.png" alt="img"> </p><p>node3</p><p><img src="/2022/06/05/four/8.png" alt="img"> </p><p><img src="/2022/06/05/four/9.png" alt="img"> </p><p>4、配置环境变量</p><p>  vi &#x2F;etc&#x2F;profile（将以下内容添加到profile文件中，三台虚拟机都需要） </p><p>export KAFKA_HOME&#x3D;&#x2F;export&#x2F;server&#x2F;kafka </p><p>export PATH&#x3D;$PATH:$KAFKA_HOME&#x2F;bin </p><p>#重新加载环境变量</p><p>source &#x2F;etc&#x2F;profile </p><p>\1. 启动kafka</p><p>  <img src="/2022/06/05/four/10.png" alt="img"></p><p>  <img src="/2022/06/05/four/11.png" alt="img"></p><p>  <img src="/2022/06/05/four/12.png" alt="img"></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;*&lt;strong&gt;*一、*&lt;em&gt;Kafka环境配置*&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;1、上传安装包到&amp;#x2F;export&amp;#x2F;server&amp;#x2F;路径并解压&lt;/p&gt;
+&lt;p&gt;cd &amp;#x2F;export&amp;#x2F;server&lt;/p&gt;
+&lt;p&gt;rz</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>Spark HA &amp; Yarn配置</title>
